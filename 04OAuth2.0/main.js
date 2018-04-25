@@ -16,7 +16,7 @@ function exchangeOAuth2Token(params) {
                 if (xhr.readyState == 4 &&
                 xhr.status == 200 &&
                 response['aud'] &&
-                response['aud'] == '358900151331-fl3m7t2bor93saiaviup700bavrqeqpd.apps.googleusercontent.com') {
+                response['aud'] == 'YOUR_CLIENT_ID') {
                     console.log("si se guardo");
                     localStorage.setItem('oauth2App', JSON.stringify(params) );
                 } else if (xhr.readyState == 4) {
@@ -35,7 +35,7 @@ function exchangeOAuth2Token(params) {
 }
 
 
-let clientID = "358900151331-fl3m7t2bor93saiaviup700bavrqeqpd.apps.googleusercontent.com";
+let clientID = "YOUR_CLIENT_ID";
 let autorizacionURL = "https://accounts.google.com/o/oauth2/v2/auth";
 let redirectURL = "http://127.0.0.1/OAuth";
 let scope = "https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.profile.emails.read https://www.googleapis.com/auth/plus.login";
